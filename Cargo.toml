@@ -1,0 +1,16 @@
+[package]
+name = "monoxide"
+version = "0.1.0"
+authors = ["Malek <pocmalek@gmail.com>"]
+description = "Monoxide is a step-by-step carcinization/oxidation of Monado, replacing it's current code with rust slowly, as well as using rust crates to augment the monado experience heavily."
+repository = "https://github.com/MalekiRe/monoxide"
+readme = "README.md"
+rust-version = "1.65.0"
+build = "build.rs"
+publish = false
+
+[dependencies]
+
+[dev-dependencies]
+
+[build-dependencies]
