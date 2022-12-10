@@ -23,7 +23,7 @@ cargo run
 
 Currently this is alpha software so no installation path is provided.
 
-### I wanna help🥺🥺 🥺
+### I wanna help 🥺🥺🥺
 
 If you want to help contribute to monoxide feel free to join the Stardust discord and talk with us there.
 
