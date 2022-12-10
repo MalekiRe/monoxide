@@ -26,7 +26,7 @@ Currently this is alpha software so no installation path is provided.
 ## I wanna help
 ![Alt text](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/pleading-face_1f97a.png "Pleading Emoji")
 
-If you want to help contribute to monoxide feel free to join the Stardust discord and talk with us there.
+If you want to help contribute to monoxide feel free to join the [Stardust Discord](https://discord.gg/KkxeJaQYnG) and talk with us there.
 
 You can also file issues or make pull requests with new features or fixes.
 
