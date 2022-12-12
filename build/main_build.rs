@@ -11,8 +11,8 @@ fn main() {
     //panic!("info: {}", target_helper::get_out_dir());
     //panic!("{}", get_root_dir());
     generate_python_bindings();
-    //xrt::auxiliary::math::build();
-    //xrt::auxiliary::util::build();
+    xrt::auxiliary::math::build();
+    xrt::auxiliary::util::build();
 }
 
 fn generate_python_bindings() {
