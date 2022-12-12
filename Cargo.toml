@@ -6,7 +6,7 @@ description = "Monoxide is a step-by-step carcinization/oxidation of Monado, rep
 repository = "https://github.com/MalekiRe/monoxide"
 readme = "README.md"
 rust-version = "1.65.0"
-build = "build.rs"
+build = "build/main_build.rs"
 publish = false
 
 [dependencies]
@@ -15,4 +15,5 @@ publish = false
 
 [build-dependencies]
 bindgen = "0.63.0"
-cmake = "0.1.48"
+cc = {version = "1.0.77", features = ["parallel"]}
+pkg-config = "0.3.26"
