@@ -12,7 +12,7 @@ pub fn build() -> &'static str {
     build.include("monado/src/external/cjson");
     build.include("fake_headers");
     build.include(get_out_dir()+"/monado/src/xrt/auxiliary");
-    build.object(get_out_dir() + "/libaux_math.a");
+    //build.object(get_out_dir() + "/libaux_math.a");
     build.static_flag(true);
     build.warnings(false);
     build.shared_flag(true);

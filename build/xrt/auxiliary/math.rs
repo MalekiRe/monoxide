@@ -4,6 +4,8 @@ pub fn build() -> &'static str{
     let x = pkg_config::Config::new().probe("eigen3").unwrap();
     let mut build = cc::Build::new();
     build.cpp(true);
+    build.compiler("g++");
+    build.cpp_link_stdlib("stdc++");
     build.include("/usr/include/eigen3");
     //build.file("monado/src/xrt/auxiliary/math/m_base.cpp");
     build.include("monado/src/xrt/auxiliary/math");
@@ -11,6 +13,9 @@ pub fn build() -> &'static str{
     build.include("monado/src/xrt/include");
     build.include("fake_headers");
     build.files(get_build_files());
+    build.warnings(false);
+    build.shared_flag(true);
+    build.static_flag(true);
     let name = "aux_math";
     build.compile(name);
     name

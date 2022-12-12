@@ -1,9 +1,18 @@
-use std::ffi::c_void;
-use std::ptr::null_mut;
-//include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+#![allow(non_upper_case_globals)]
+#![allow(non_camel_case_types)]
+#![allow(non_snake_case)]
+
+include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 pub fn main() {
-
+    let mut vec = xrt_vec3 {
+        x: 0.0,
+        y: 0.0,
+        z: 0.0,
+    };
+    unsafe {
+        math_vec3_normalize(&mut vec);
+    }
 }
 // extern "C" {
 //     pub fn main_1(
