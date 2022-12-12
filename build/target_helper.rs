@@ -1,7 +1,14 @@
 use std::env;
 use target_helper::TargetOs::{Android, Dragonfly, FreeBSD, IOS, Linux, MacOS, NetBSD, OpenBSD, Windows};
 
-enum TargetFamily {
+
+pub fn get_out_dir() -> String {
+    env::var("OUT_DIR").unwrap().as_str().to_string()
+}
+pub fn get_root_dir() -> String {
+    env::var("CARGO_MANIFEST_DIR").unwrap().as_str().to_string()
+}
+pub enum TargetFamily {
     Windows,
     Wasm,
     Unix,
@@ -19,7 +26,7 @@ impl TargetFamily {
         }
     }
 }
-enum TargetOs {
+pub enum TargetOs {
     Windows,
     MacOS,
     IOS,

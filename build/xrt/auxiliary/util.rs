@@ -1,9 +1,19 @@
 use cc::Build;
+use target_helper::get_out_dir;
 
 pub fn build() -> &'static str {
     let mut build = cc::Build::new();
     build.files(get_build_files());
+    build.include("monado/src/xrt/auxiliary");
+    build.include("monado/src/xrt/auxiliary/math");
+    build.include("monado/src/xrt/include");
+    build.include("monado/src/external/nanopb");
+    build.include("monado/src/external");
+    build.include("monado/src/external/cjson");
+    build.include("fake_headers");
+    build.object(get_out_dir() + "/libaux_math.a");
     build.static_flag(true);
+    build.warnings(false);
     build.shared_flag(true);
     let name = "aux_util";
     build.compile(name);
