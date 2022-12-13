@@ -1,18 +1,23 @@
-#![allow(non_upper_case_globals)]
-#![allow(non_camel_case_types)]
-#![allow(non_snake_case)]
+// #![allow(non_upper_case_globals)]
+// #![allow(non_camel_case_types)]
+// #![allow(non_snake_case)]
+//
+// include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
-include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+extern crate aux_math;
+
+use aux_math::{math_vec3_normalize, xrt_vec3};
 
 pub fn main() {
     let mut vec = xrt_vec3 {
-        x: 0.0,
-        y: 0.0,
-        z: 0.0,
+        x: 1.0,
+        y: 1.0,
+        z: 1.0,
     };
     unsafe {
         math_vec3_normalize(&mut vec);
     }
+    println!("{:?}", vec);
 }
 // extern "C" {
 //     pub fn main_1(

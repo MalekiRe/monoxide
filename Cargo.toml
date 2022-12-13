@@ -9,7 +9,17 @@ rust-version = "1.65.0"
 build = "build/main_build.rs"
 publish = false
 
+[workspace]
+members = [
+    "monado_crates/aux-math",
+    "monado_crates/aux-util",
+    "helper_crates/build-helper",
+    "helper_crates/bindings_include"
+]
+
 [dependencies]
+aux-math = { path = "monado_crates/aux-math"}
+aux-util = { path = "monado_crates/aux-util"}
 
 [dev-dependencies]
 

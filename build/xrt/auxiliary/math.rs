@@ -2,11 +2,12 @@ use cc::Build;
 
 pub fn build() -> &'static str{
     let x = pkg_config::Config::new().probe("eigen3").unwrap();
+    // panic!("{:?}", x.include_paths);
     let mut build = cc::Build::new();
     build.cpp(true);
-    build.compiler("g++");
-    build.cpp_link_stdlib("stdc++");
-    build.include("/usr/include/eigen3");
+    // build.compiler("g++");
+    // build.cpp_link_stdlib("stdc++");
+    build.include(x.include_paths.first().unwrap());
     //build.file("monado/src/xrt/auxiliary/math/m_base.cpp");
     build.include("monado/src/xrt/auxiliary/math");
     build.include("monado/src/xrt/auxiliary");
