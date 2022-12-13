@@ -119,9 +119,6 @@ name = "cc"
 version = "1.0.77"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e9f73505338f7d905b19d18738976aae232eb46b8efc15554ffc56deb5d9ebe4"
-dependencies = [
- "jobserver",
-]
 
 [[package]]
 name = "cexpr"
@@ -231,15 +228,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "jobserver"
-version = "0.1.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "068b1ee6743e4d11fb9c6a1e6064b3693a1b600e7f5f5988047d98b3dc9fb90b"
-dependencies = [
- "libc",
-]
-
-[[package]]
 name = "lazy_static"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -313,9 +301,6 @@ version = "0.1.0"
 dependencies = [
  "aux-math",
  "aux-util",
- "bindgen",
- "cc",
- "pkg-config",
  "ustr",
 ]
 

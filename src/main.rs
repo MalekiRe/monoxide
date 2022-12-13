@@ -8,7 +8,6 @@ extern crate aux_math;
 extern crate aux_util;
 extern crate ustr;
 
-use std::ptr::null_mut;
 use ustr::ustr;
 use aux_math::{math_vec3_normalize, xrt_vec3};
 
@@ -34,25 +33,3 @@ fn test_all_libs() {
         println!("{:?}", aux_util::xrt_input_name_enum(ustr("XRT_INPUT_TOUCH_THUMBSTICK_CLICK").as_char_ptr()));
     }
 }
-// extern "C" {
-//     pub fn main_1(
-//         argc: ::std::os::raw::c_int,
-//         argv: *mut *mut ::std::os::raw::c_char,
-//     ) -> ::std::os::raw::c_int;
-//
-//     pub fn u_trace_marker_init();
-// }
-//
-//
-//
-// fn main() {
-//    // unsafe { run_things(); }
-//     unsafe {run_things();}
-//     unsafe {main_1(0, null_mut());}
-//     unsafe {u_trace_marker_init()};
-//     println!("Hello World!");
-// }
-
-// extern "C" {
-//     fn run_things();
-// }
