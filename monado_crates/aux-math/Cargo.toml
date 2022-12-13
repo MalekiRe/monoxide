@@ -1,0 +1,13 @@
+[package]
+name = "aux-math"
+version = "0.1.0"
+edition = "2021"
+description = "monado/src/xrt/auxiliary/math"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bindings_include = { path = "../../helper_crates/bindings_include"}
+
+[build-dependencies]
+build-helper = {path = "../../helper_crates/build-helper" }
+cc = "1.0.77"
