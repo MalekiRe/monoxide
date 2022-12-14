@@ -35,10 +35,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 
 [[package]]
+name = "aux-gstreamer"
+version = "0.1.0"
+dependencies = [
+ "bindings_include",
+ "build-helper",
+ "cc",
+ "cmake",
+]
+
+[[package]]
 name = "aux-math"
 version = "0.1.0"
 dependencies = [
  "bindings_include",
+ "build-helper",
+ "cc",
+]
+
+[[package]]
+name = "aux-os"
+version = "0.1.0"
+dependencies = [
  "build-helper",
  "cc",
 ]
@@ -144,6 +162,15 @@ dependencies = [
  "glob",
  "libc",
  "libloading",
+]
+
+[[package]]
+name = "cmake"
+version = "0.1.49"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "db34956e100b30725f2eb215f90d4871051239535632f84fea3bc92722c66b7c"
+dependencies = [
+ "cc",
 ]
 
 [[package]]
@@ -299,8 +326,11 @@ dependencies = [
 name = "monoxide"
 version = "0.1.0"
 dependencies = [
+ "aux-gstreamer",
  "aux-math",
+ "aux-os",
  "aux-util",
+ "cmake",
  "ustr",
 ]
 

@@ -7,9 +7,11 @@
 extern crate aux_math;
 extern crate aux_util;
 extern crate ustr;
+extern crate aux_os;
 
 use ustr::ustr;
 use aux_math::{math_vec3_normalize, xrt_vec3};
+use aux_os::{sem_unlink};
 
 pub fn main() {
     test_all_libs();
@@ -30,6 +32,7 @@ fn test_all_libs() {
     }
     println!("{:?}", vec);
     unsafe {
+        println!("{:?}", aux_os::sem_unlink(ustr("").as_char_ptr()));
         println!("{:?}", aux_util::xrt_input_name_enum(ustr("XRT_INPUT_TOUCH_THUMBSTICK_CLICK").as_char_ptr()));
     }
 }

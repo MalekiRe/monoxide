@@ -1,0 +1,14 @@
+[package]
+name = "aux-gstreamer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bindings_include = { path = "../../helper_crates/bindings_include"}
+
+[build-dependencies]
+build-helper = {path = "../../helper_crates/build-helper" }
+cc = "1.0.77"
+cmake = "0.1.49"
